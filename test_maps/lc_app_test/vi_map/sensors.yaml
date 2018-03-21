@@ -66,3 +66,4 @@ mission_sensors_associations:
 mission_ncamera_associations:
   - mission_id: e53886ecffffffff0100000000000000
     ncamera_id: 412eab8e4058621f7036b5e765dfe813
+mission_optional_ncamera_associations: ~
