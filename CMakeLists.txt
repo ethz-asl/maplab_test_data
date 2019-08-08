@@ -10,6 +10,8 @@ install(DIRECTORY end_to_end_test
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 install(DIRECTORY frame_localizer_test_data
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+install(DIRECTORY localization_fusion_test_data
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 install(DIRECTORY map_resources_test_data
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 install(DIRECTORY maplab_common_test_data
