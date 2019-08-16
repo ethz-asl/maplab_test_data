@@ -10,28 +10,26 @@ sensors:
     saturation_accel_max_mps2: 150
     saturation_gyro_max_radps: 7.5
     gravity_magnitude_mps2: 9.808083883386614
-ncameras:
-  - label: 23016 turtlebot factory
-    id: 412eab8e4058621f7036b5e765dfe813
-    cameras:
-      - camera:
-          label: unnamed camera
-          id: 54812562fa109c40fe90b29a59dd7795
-          line-delay-nanoseconds: 0
-          image_height: 480
-          image_width: 752
-          type: pinhole
-          intrinsics:
-            rows: 4
-            cols: 1
-            data:
-              - 472.2863830700696
-              - 470.8375968434678
-              - 368.8316828103749
-              - 232.2368870696565
-          distortion:
-            type: equidistant
-            parameters:
+  - id: 54812562fa109c40fe90b29a59dd7795
+    sensor_type: Camera
+    hardware_id: cam0
+    label: unnamed camera
+    index: 0
+    line_delay_nanoseconds: 0
+    image_height: 480
+    image_width: 752
+    type: pinhole
+    intrinsics:
+       rows: 4
+       cols: 1
+       data:
+          - 472.2863830700696
+          - 470.8375968434678
+          - 368.8316828103749
+          - 232.2368870696565
+    distortion:
+       type: equidistant
+       parameters:
               rows: 4
               cols: 1
               data:
@@ -39,7 +37,7 @@ ncameras:
                 - 0.02878252863739417
                 - -0.04010621197185408
                 - 0.02008469575876223
-        T_B_C:
+    T_B_C:
           rows: 4
           cols: 4
           data:
@@ -63,7 +61,8 @@ mission_sensors_associations:
   - mission_id: e53886ecffffffff0100000000000000
     sensor_ids:
       - sensor_id: b91fa7a1ffffffff0100000000000000
-mission_ncamera_associations:
-  - mission_id: e53886ecffffffff0100000000000000
-    ncamera_id: 412eab8e4058621f7036b5e765dfe813
+      - sensor_id: 54812562fa109c40fe90b29a59dd7795
 mission_optional_ncamera_associations: ~
+sensor_system:
+  sensor_system_id: b91fa7a1ffffffff0100000000000000
+  reference_sensor_id: 54812562fa109c40fe90b29a59dd7795
