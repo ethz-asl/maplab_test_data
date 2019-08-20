@@ -37,7 +37,20 @@ sensors:
                 - 0.02878252863739417
                 - -0.04010621197185408
                 - 0.02008469575876223
-    T_B_C:
+mission_sensors_associations:
+  - mission_id: e53886ecffffffff0100000000000000
+    sensor_ids:
+      - sensor_id: b91fa7a1ffffffff0100000000000000
+      - sensor_id: 54812562fa109c40fe90b29a59dd7795
+mission_optional_ncamera_associations: ~
+sensor_system:
+  sensor_system_id: 1350719effffffff0300000000000000
+  reference_sensor_id: b91fa7a1ffffffff0100000000000000
+  sensor_id_with_extrinsics:
+    - sensor_id: 54812562fa109c40fe90b29a59dd7795
+      extrinsics:
+        extrinsics_type: transformation
+        T_R_S:
           rows: 4
           cols: 4
           data:
@@ -57,12 +70,3 @@ sensors:
             - 0
             - 0
             - 1
-mission_sensors_associations:
-  - mission_id: e53886ecffffffff0100000000000000
-    sensor_ids:
-      - sensor_id: b91fa7a1ffffffff0100000000000000
-      - sensor_id: 54812562fa109c40fe90b29a59dd7795
-mission_optional_ncamera_associations: ~
-sensor_system:
-  sensor_system_id: b91fa7a1ffffffff0100000000000000
-  reference_sensor_id: 54812562fa109c40fe90b29a59dd7795
