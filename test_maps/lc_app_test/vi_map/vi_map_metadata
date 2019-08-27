@@ -24,7 +24,23 @@ files {
 }
 files {
   file_type: 3
-  path: "landmark_index"
+  path: "landmark_index0"
+}
+files {
+  file_type: 4
+  path: "transformation_manager"
+}
+files {
+  file_type: 5
+  path: "command_log"
+}
+files {
+  file_type: 6
+  path: "road_graph"
+}
+files {
+  file_type: 7
+  path: "map_data_index"
 }
 files {
   file_type: 10

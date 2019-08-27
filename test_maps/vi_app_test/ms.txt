@@ -1,0 +1,30 @@
+Descriptor size [bytes]: 48
+
+Mission statistics: 
+
+Mission 0:          		c7957efb9cf29d4874676106d6beb551	Viwls
+	 Created:          	1970-01-01_00-00-00UTC   
+	Camera Sensor:      	4809a0c7e7ca060b45856a9a18040434
+	IMU Sensor:         	7301e8e2ffffffff0100000000000000
+	Vertices:           	405                      
+	Landmarks:          	8359                     
+	Landmarks by first observer backlink:	                         
+	Camera 0:           	8359 (g:0 b:0 u:8359)    
+	Landmarks, total:   	 g: 0 b: 0 u: 8359       
+	Observations:       	174464                   
+	Num edges by type:  	                         
+		IMU:                	404                      
+		Gyro:               	0                        
+		Wheel-odometry:     	0                        
+		Loop-closure:       	0                        
+		Dummy:              	0                        
+	Distance travelled [m]:	23.465334                
+	Start to end time:  	1970_01_01_03_13_13 to 1970_01_01_03_13_53
+	T_G_M               	unknown                  
+Accumulated statistics over all missions:
+	Number of missions: 	1                        
+	Vertices:           	405                      
+	Landmarks:          	8359 (g:0 b:0 u:8359)    
+	Observations:       	174464                   
+	Distance travelled [m]:	23.465334                
+	Duration [s]:       	40.392347                
