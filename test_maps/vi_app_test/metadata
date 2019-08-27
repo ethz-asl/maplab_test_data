@@ -1,3 +1,3 @@
-map_folder: "/home/lschaupp/catkin_visloc/src/maplab_dependencies/internal/maplab_test_data/test_maps_new/vi_app_test"
+map_folder: "."
 resource_folder_in_use: -1
-map_resource_folder: "/home/lschaupp/catkin_visloc/src/maplab_dependencies/internal/maplab_test_data/test_maps_new/vi_app_test/resources/"
+map_resource_folder: "./resources/"
