@@ -1,4 +1,30 @@
 sensors:
+  - id: 54812562fa109c40fe90b29a59dd7795
+    sensor_type: Camera
+    hardware_id: cam0
+    line_delay_nanoseconds: 0
+    image_height: 480
+    image_width: 752
+    type: pinhole
+    intrinsics:
+      rows: 4
+      cols: 1
+      data:
+        - 472.2863830700696
+        - 470.8375968434678
+        - 368.8316828103749
+        - 232.2368870696565
+    index: 0
+    distortion:
+      type: equidistant
+      parameters:
+        rows: 4
+        cols: 1
+        data:
+          - -0.005740195474458931
+          - 0.02878252863739417
+          - -0.04010621197185408
+          - 0.02008469575876223
   - id: b91fa7a1ffffffff0100000000000000
     sensor_type: IMU
     hardware_id: imu0
@@ -10,39 +36,11 @@ sensors:
     saturation_accel_max_mps2: 150
     saturation_gyro_max_radps: 7.5
     gravity_magnitude_mps2: 9.808083883386614
-  - id: 54812562fa109c40fe90b29a59dd7795
-    sensor_type: Camera
-    hardware_id: cam0
-    label: unnamed camera
-    index: 0
-    line_delay_nanoseconds: 0
-    image_height: 480
-    image_width: 752
-    type: pinhole
-    intrinsics:
-       rows: 4
-       cols: 1
-       data:
-          - 472.2863830700696
-          - 470.8375968434678
-          - 368.8316828103749
-          - 232.2368870696565
-    distortion:
-       type: equidistant
-       parameters:
-              rows: 4
-              cols: 1
-              data:
-                - -0.005740195474458931
-                - 0.02878252863739417
-                - -0.04010621197185408
-                - 0.02008469575876223
 mission_sensors_associations:
   - mission_id: e53886ecffffffff0100000000000000
     sensor_ids:
-      - sensor_id: b91fa7a1ffffffff0100000000000000
       - sensor_id: 54812562fa109c40fe90b29a59dd7795
-mission_optional_ncamera_associations: ~
+      - sensor_id: b91fa7a1ffffffff0100000000000000
 sensor_system:
   sensor_system_id: 1350719effffffff0300000000000000
   reference_sensor_id: b91fa7a1ffffffff0100000000000000
@@ -60,10 +58,10 @@ sensor_system:
             - 0.03661313999999618
             - 0.01242827026330047
             - 0.9998900372788196
-            - 0.008090206970351213
+            - 0.008090206970351212
             - -0.01027102000001149
             - 0.001354802375246977
-            - -0.008107663030110427
+            - -0.008107663030110426
             - 0.99996621458463
             - -0.006544660000003794
             - 0
