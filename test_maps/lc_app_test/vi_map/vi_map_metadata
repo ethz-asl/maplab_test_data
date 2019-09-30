@@ -11,6 +11,18 @@ files {
   path: "vertices1"
 }
 files {
+  file_type: 1
+  path: "vertices2"
+}
+files {
+  file_type: 1
+  path: "vertices3"
+}
+files {
+  file_type: 1
+  path: "vertices4"
+}
+files {
   file_type: 2
   path: "edges0"
 }

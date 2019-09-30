@@ -1,68 +1,79 @@
 sensors:
-  - id: 0fbb7dceb7644143e47938043f60b136
+  - id: aabb23479caf7592b35518478a2fe08f
+    sensor_type: ODOMETRY_6DOF
+    topic: /odometry/maplab_odom_T_M_I
+    description: ROVIOLI in Odometry mode
+  - id: 5d2fcf479caf7592b35518478a2fe08f
+    sensor_type: IMU
+    topic: /imu0
+    description: Tango Lenovo IMU (BMI055)
+    sigmas:
+      gyro_noise_density: 0.0007309
+      gyro_bias_random_walk_noise_density: 0.01413
+      acc_noise_density: 0.0188
+      acc_bias_random_walk_noise_density: 0.012589
+    saturation_accel_max_mps2: 150
+    saturation_gyro_max_radps: 7.5
+    gravity_magnitude_mps2: 9.808083883386614
+  - id: 8af1bac2a7c5fad79f09e49e3b96d87c
     sensor_type: NCAMERA
     topic: ""
-    description: Sensor stick camera setup
+    description: Tango Lenovo Fisheye Camera
     cameras:
       - camera:
-          id: 9be7b5000f15adb3c0da8ac6b729ee05
+          id: ca27b5000f15adb3c0da8ac6b729ee05
           sensor_type: CAMERA
-          topic: /VersaVIS/cam0
-          description: Color camera
+          topic: /camera/fisheye/
+          description: Tango Lenovo Fisheye Camera
           line-delay-nanoseconds: 0
-          image_height: 540
-          image_width: 720
+          image_height: 480
+          image_width: 640
           type: pinhole
           intrinsics:
             rows: 4
             cols: 1
             data:
-              - 288.408207812205
-              - 288.2231103613684
-              - 362.6636545997341
-              - 274.6270363549055
+              - 257.6718136876041
+              - 258.1559643350999
+              - 327.7337690028205
+              - 229.1120232879762
           distortion:
-            type: equidistant
+            type: fisheye
             parameters:
-              rows: 4
+              rows: 1
               cols: 1
               data:
-                - 0.007267463899378662
-                - -0.003416892997276599
-                - 0.0005955948706648939
-                - -0.0004223559610193976
+                - 0.932489670230815
         T_B_C:
           rows: 4
           cols: 4
           data:
-            - [-0.9999237459683412, -0.00887049095954965, -0.008591661002224566, -0.0342271585535882]
-            - [-0.008578055805414566, -0.001570668851441637, 0.9999619742560005, 0.05631226626235313]
-            - [-0.008883648306849611, 0.9999594228714962, 0.001494457515136882, 0.05622655837534755]
+            - [0.01485979294961681, 0.9998813102248827, -0.004068416948407546, 0.00522426698804343]
+            - [0.9998866182599342, -0.01484971039347216, 0.002497343777399545, -0.004059101273145659]
+            - [0.002436632554784469, -0.004105065675670794, -0.9999886055638787, -0.003075503564656982]
             - [0, 0, 0, 1]
-  - id: 5d2fcf479caf7592b35518478a2fe08f
-    sensor_type: IMU
-    topic: /VersaVIS/imu
-    description: ADIS IMU
-    sigmas:
-      gyro_noise_density: 0.005
-      gyro_bias_random_walk_noise_density: 4e-06
-      acc_noise_density: 0.01
-      acc_bias_random_walk_noise_density: 0.0002
-    saturation_accel_max_mps2: 150
-    saturation_gyro_max_radps: 7.5
-    gravity_magnitude_mps2: 9.808083883386614
 extrinsics:
-  - sensor_id: 0fbb7dceb7644143e47938043f60b136
+  - sensor_id: aabb23479caf7592b35518478a2fe08f
     base_sensor_id: 5d2fcf479caf7592b35518478a2fe08f
     T_B_S:
       rows: 4
       cols: 4
       data:
-        - [-0.9999237459683412, -0.00887049095954965, -0.008591661002224566, -0.0342271585535882]
-        - [-0.008578055805414566, -0.001570668851441637, 0.9999619742560005, 0.05631226626235313]
-        - [-0.008883648306849611, 0.9999594228714962, 0.001494457515136882, 0.05622655837534755]
+        - [1, 0, 0, 0]
+        - [0, 1, 0, 0]
+        - [0, 0, 1, 0]
         - [0, 0, 0, 1]
   - sensor_id: 5d2fcf479caf7592b35518478a2fe08f
+    base_sensor_id: 5d2fcf479caf7592b35518478a2fe08f
+    T_B_S:
+      rows: 4
+      cols: 4
+      data:
+        - [1, 0, 0, 0]
+        - [0, 1, 0, 0]
+        - [0, 0, 1, 0]
+        - [0, 0, 0, 1]
+  - sensor_id: 8af1bac2a7c5fad79f09e49e3b96d87c
     base_sensor_id: 5d2fcf479caf7592b35518478a2fe08f
     T_B_S:
       rows: 4
