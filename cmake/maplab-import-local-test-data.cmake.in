@@ -1,0 +1,14 @@
+SET(MAPLAB_IMPORT_LOCAL_TEST_DATA "local-test-data")
+if("${DEVELSPACE}" STREQUAL "TRUE")
+  set(MAPLAB_LOCAL_TEST_DATA_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
+else()
+  set(MAPLAB_LOCAL_TEST_DATA_DIR "${CMAKE_INSTALL_PREFIX}/${CATKIN_PACKAGE_SHARE_DESTINATION}")
+endif()
+add_custom_target(${MAPLAB_IMPORT_LOCAL_TEST_DATA})
+add_custom_command(TARGET ${MAPLAB_IMPORT_LOCAL_TEST_DATA}
+                   COMMAND rm -rf test-data &&
+                 cp -r ${MAPLAB_LOCAL_TEST_DATA_DIR}/test-data .)
+
+function(maplab_import_local_test_data test_target)
+  add_dependencies(${test_target} ${MAPLAB_IMPORT_LOCAL_TEST_DATA})
+endfunction()

@@ -25,4 +25,4 @@ install(DIRECTORY stereo_dense_reconstruction_test_data
 install(DIRECTORY test_maps
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 cs_install()
-cs_export(CFG_EXTRAS maplab-test-data.cmake maplab-import-test-maps.cmake)
+cs_export(CFG_EXTRAS maplab-test-data.cmake maplab-import-test-maps.cmake maplab-import-local-test-data.cmake)
