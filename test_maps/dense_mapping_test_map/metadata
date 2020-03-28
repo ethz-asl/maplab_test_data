@@ -1,0 +1,3 @@
+map_folder: "/home/mfehr/maplab_ws/src/maplab_experimental/maplab/tools/maplab-test-data/test_maps/dense_mapping_test_map"
+resource_folder_in_use: -1
+map_resource_folder: "/home/mfehr/maplab_ws/src/maplab_experimental/maplab/tools/maplab-test-data/test_maps/dense_mapping_test_map/resources/"
