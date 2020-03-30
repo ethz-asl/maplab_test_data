@@ -10,6 +10,8 @@ install(DIRECTORY end_to_end_test
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 install(DIRECTORY frame_localizer_test_data
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+install(DIRECTORY localization_fusion_test_data
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 install(DIRECTORY map_resources_test_data
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 install(DIRECTORY maplab_common_test_data
@@ -23,4 +25,4 @@ install(DIRECTORY stereo_dense_reconstruction_test_data
 install(DIRECTORY test_maps
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 cs_install()
-cs_export(CFG_EXTRAS maplab-test-data.cmake maplab-import-test-maps.cmake)
+cs_export(CFG_EXTRAS maplab-test-data.cmake maplab-import-test-maps.cmake maplab-import-local-test-data.cmake)

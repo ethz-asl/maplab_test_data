@@ -1,66 +1,74 @@
 sensors:
-  - id: 7301e8e2ffffffff0100000000000000
-    sensor_type: IMU
-    hardware_id: imu0
-    sigmas:
-      gyro_noise_density: 0.053088444
-      gyro_bias_random_walk_noise_density: 0.14125375
-      acc_noise_density: 0.001883649
-      acc_bias_random_walk_noise_density: 0.012589254
-    saturation_accel_max_mps2: 150
-    saturation_gyro_max_radps: 7.5
-    gravity_magnitude_mps2: 9.808083883386614
-ncameras:
-  - label: Tango camera
-    id: 4809a0c7e7ca060b45856a9a18040434
+  - id: 0fbb7dceb7644143e47938043f60b136
+    sensor_type: NCAMERA
+    topic: ""
+    description: Sensor stick camera setup
     cameras:
       - camera:
-          label: unnamed camera
-          id: fb35c057f9845c71aa169aa26f86f607
+          id: 9be7b5000f15adb3c0da8ac6b729ee05
+          sensor_type: CAMERA
+          topic: /VersaVIS/cam0
+          description: Color camera
           line-delay-nanoseconds: 0
-          image_height: 480
-          image_width: 640
+          image_height: 540
+          image_width: 720
           type: pinhole
           intrinsics:
             rows: 4
             cols: 1
             data:
-              - 253.24
-              - 253.949
-              - 317.661
-              - 248.708
+              - 289.6191518901583
+              - 289.8191221366525
+              - 362.9159385261057
+              - 275.5743051498999
           distortion:
-            type: fisheye
+            type: equidistant
             parameters:
-              rows: 1
+              rows: 4
               cols: 1
               data:
-                - 0.920805
+                - 0.001760081054894864
+                - 0.001080480078242321
+                - -0.001169488800188161
+                - -0.0004118500650155823
         T_B_C:
           rows: 4
           cols: 4
           data:
-            - -2.220446049250313e-16
-            - -0.9749435239382782
-            - 0.2224525233185989
-            - 0.0012
-            - -1
-            - 1.110223024625157e-16
-            - -1.387778780781446e-17
-            - -0.05899699999999998
-            - -1.387778780781446e-17
-            - -0.2224525233185989
-            - -0.9749435239382782
-            - -0.001572500000000002
-            - 0
-            - 0
-            - 0
-            - 1
-mission_sensors_associations:
-  - mission_id: c7957efb9cf29d4874676106d6beb551
-    sensor_ids:
-      - sensor_id: 7301e8e2ffffffff0100000000000000
-mission_ncamera_associations:
-  - mission_id: c7957efb9cf29d4874676106d6beb551
-    ncamera_id: 4809a0c7e7ca060b45856a9a18040434
-mission_optional_ncamera_associations: ~
+            - [-0.9999537703032262, -0.009148496952952606, -0.002960111461427273, -0.03131118587043426]
+            - [-0.002925468529865689, -0.003797799894875276, 0.9999885091088992, 0.05785720770074482]
+            - [-0.009159633739567413, 0.9999509396562715, 0.003770860683806498, 0.06040644785838263]
+            - [0, 0, 0, 1]
+  - id: 5d2fcf479caf7592b35518478a2fe08f
+    sensor_type: IMU
+    topic: /VersaVIS/imu
+    description: ADIS IMU
+    sigmas:
+      gyro_noise_density: 0.005
+      gyro_bias_random_walk_noise_density: 4e-06
+      acc_noise_density: 0.01
+      acc_bias_random_walk_noise_density: 0.0002
+    saturation_accel_max_mps2: 150
+    saturation_gyro_max_radps: 7.5
+    gravity_magnitude_mps2: 9.808083883386614
+extrinsics:
+  - sensor_id: 0fbb7dceb7644143e47938043f60b136
+    base_sensor_id: 5d2fcf479caf7592b35518478a2fe08f
+    T_B_S:
+      rows: 4
+      cols: 4
+      data:
+        - [-0.9999237459683412, -0.00887049095954965, -0.008591661002224566, -0.0342271585535882]
+        - [-0.008578055805414566, -0.001570668851441637, 0.9999619742560005, 0.05631226626235313]
+        - [-0.008883648306849611, 0.9999594228714962, 0.001494457515136882, 0.05622655837534755]
+        - [0, 0, 0, 1]
+  - sensor_id: 5d2fcf479caf7592b35518478a2fe08f
+    base_sensor_id: 5d2fcf479caf7592b35518478a2fe08f
+    T_B_S:
+      rows: 4
+      cols: 4
+      data:
+        - [1, 0, 0, 0]
+        - [0, 1, 0, 0]
+        - [0, 0, 1, 0]
+        - [0, 0, 0, 1]
