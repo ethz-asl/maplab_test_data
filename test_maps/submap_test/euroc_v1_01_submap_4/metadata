@@ -1,3 +1,3 @@
-map_folder: "/tmp/maplab_node/maplab_v1_01_rovioli_2019_10_07_19_49_23_submap_4"
+map_folder: "."
 resource_folder_in_use: -1
-map_resource_folder: "/tmp/maplab_node/maplab_v1_01_rovioli_2019_10_07_19_49_23_submap_4/resources/"
+map_resource_folder: "./resources/"
