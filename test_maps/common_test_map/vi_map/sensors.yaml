@@ -1,0 +1,247 @@
+sensors:
+  - id: bbf123479caf7592b35518478a2fe08d
+    sensor_type: LIDAR
+    topic: /lidar_undistortion/pointcloud_corrected
+    description: Ouster OS1
+  - id: 4af1bac2a7c5fad79f09e49e3b96d87c
+    sensor_type: NCAMERA
+    topic: ""
+    description: Alphasense
+    cameras:
+      - camera:
+          id: 9da9c2fa16894a059f8b40740c721cb1
+          sensor_type: CAMERA
+          topic: /alphasense/cam0
+          description: Forward Up
+          compressed: false
+          line-delay-nanoseconds: 0
+          image_height: 1080
+          image_width: 1440
+          type: pinhole
+          intrinsics:
+            rows: 4
+            cols: 1
+            data:
+              - 701.6093151020301
+              - 701.101293415187
+              - 703.4368797232662
+              - 530.3135591232868
+          distortion:
+            type: equidistant
+            parameters:
+              rows: 4
+              cols: 1
+              data:
+                - -0.04336712917278897
+                - 0.006570110977664635
+                - -0.007433444882865234
+                - 0.002045735457572577
+        T_B_C:
+          rows: 4
+          cols: 4
+          data:
+            - [0.999990861752111, 0.0006284646399783828, -0.004228645701252082, -0.05279801932100019]
+            - [-0.004226691177021619, -0.003079450930021821, -0.9999863259382277, -0.07837486153907094]
+            - [-0.0006414779532520815, 0.999995060994772, -0.003076766463287139, -0.02628099358502389]
+            - [0, 0, 0, 1]
+      - camera:
+          id: 44ed7e1913a847b3b8d9884b9b02fb03
+          sensor_type: CAMERA
+          topic: /alphasense/cam1
+          description: Forward Down
+          compressed: false
+          line-delay-nanoseconds: 0
+          image_height: 1080
+          image_width: 1440
+          type: pinhole
+          intrinsics:
+            rows: 4
+            cols: 1
+            data:
+              - 695.6799690342032
+              - 695.6963677952774
+              - 707.6186115250404
+              - 535.8424658218318
+          distortion:
+            type: equidistant
+            parameters:
+              rows: 4
+              cols: 1
+              data:
+                - -0.04257375303271763
+                - 0.006156669659059341
+                - -0.00740023108750807
+                - 0.002079156107447231
+        T_B_C:
+          rows: 4
+          cols: 4
+          data:
+            - [-0.9999477697405299, -0.002969883894509688, -0.009779446769857449, 0.05403708473231803]
+            - [0.009764748225509687, 0.004924013957607887, -0.9999402001009394, -0.07915558489430907]
+            - [0.003017860428142552, -0.9999834668010603, -0.004894756605861472, -0.02625282010330948]
+            - [0, 0, 0, 1]
+      - camera:
+          id: 08faa68c87a84fd5bd1b0305c99b155d
+          sensor_type: CAMERA
+          topic: /alphasense/cam2
+          description: Upwards
+          compressed: false
+          line-delay-nanoseconds: 0
+          image_height: 1080
+          image_width: 1440
+          type: pinhole
+          intrinsics:
+            rows: 4
+            cols: 1
+            data:
+              - 701.3320644734001
+              - 701.3930695259667
+              - 718.2957379855827
+              - 535.7723187275584
+          distortion:
+            type: equidistant
+            parameters:
+              rows: 4
+              cols: 1
+              data:
+                - -0.03875795980183309
+                - -0.00335870139802
+                - 0.002251953419219693
+                - -0.001103896157374707
+        T_B_C:
+          rows: 4
+          cols: 4
+          data:
+            - [0.01430054690756088, -0.9998949002193495, -0.002383877779861078, 0.0006742668990006029]
+            - [0.9998893448756508, 0.01429061540230248, 0.004132349858442164, -0.03491156548403105]
+            - [-0.00409784846886108, -0.002442708854557837, 0.9999886203409407, 0.003681908458000029]
+            - [0, 0, 0, 1]
+      - camera:
+          id: da7d19d6662f4a428240bf7f706bbb4d
+          sensor_type: CAMERA
+          topic: /alphasense/cam3
+          description: Right
+          compressed: false
+          line-delay-nanoseconds: 0
+          image_height: 1080
+          image_width: 1440
+          type: pinhole
+          intrinsics:
+            rows: 4
+            cols: 1
+            data:
+              - 703.273008904613
+              - 702.817765216315
+              - 702.8544221078837
+              - 537.0703115432012
+          distortion:
+            type: equidistant
+            parameters:
+              rows: 4
+              cols: 1
+              data:
+                - -0.04274407200260321
+                - 0.003300870639764364
+                - -0.003715716140239516
+                - 0.0007495619442311171
+        T_B_C:
+          rows: 4
+          cols: 4
+          data:
+            - [-0.007315443787117903, 0.001874707327561509, -0.9999714844707457, -0.07118040789200199]
+            - [-0.9999674706724375, -0.003411133667690747, 0.007309019363927194, -0.01961029059200076]
+            - [-0.003397334125253282, 0.9999924247910734, 0.001899600301192406, -0.02538148901700114]
+            - [0, 0, 0, 1]
+      - camera:
+          id: c70f9347314d4c26a72280c1f193b47d
+          sensor_type: CAMERA
+          topic: /alphasense/cam4
+          description: Left
+          compressed: false
+          line-delay-nanoseconds: 0
+          image_height: 1080
+          image_width: 1440
+          type: pinhole
+          intrinsics:
+            rows: 4
+            cols: 1
+            data:
+              - 701.5688257771283
+              - 701.5879090005477
+              - 699.9764089544163
+              - 541.9861934781169
+          distortion:
+            type: equidistant
+            parameters:
+              rows: 4
+              cols: 1
+              data:
+                - -0.04176685726706289
+                - 0.002325551400383664
+                - -0.00255344913205093
+                - 0.0002831633732660714
+        T_B_C:
+          rows: 4
+          cols: 4
+          data:
+            - [-0.009729884446423531, -0.003198189285995356, 0.9999475490914246, 0.07185631337600087]
+            - [-0.9999399896669952, -0.005003615650076565, -0.009745814239594419, -0.01867759886299994]
+            - [0.00503452216457545, -0.9999823675524054, -0.003149312759500145, -0.02555602764300084]
+            - [0, 0, 0, 1]
+  - id: 3da6d03bd42e41a93dc941bd5fd9353d
+    sensor_type: IMU
+    topic: /alphasense/imu_adis
+    description: ADIS16445 IMU
+    sigmas:
+      gyro_noise_density: 0.0001
+      gyro_bias_random_walk_noise_density: 0.0001
+      acc_noise_density: 0.04
+      acc_bias_random_walk_noise_density: 0.001
+    saturation_accel_max_mps2: 150
+    saturation_gyro_max_radps: 7.5
+    gravity_magnitude_mps2: 9.808083883386614
+  - id: acbb23479caf7592b35518478a2fe08f
+    sensor_type: ODOMETRY_6DOF
+    topic: /odometry/maplab_odom_T_M_I
+    description: OKVIS
+extrinsics:
+  - sensor_id: bbf123479caf7592b35518478a2fe08d
+    base_sensor_id: 3da6d03bd42e41a93dc941bd5fd9353d
+    T_B_S:
+      rows: 4
+      cols: 4
+      data:
+        - [-0.009512419029932717, 0.9999544999956108, -0.0007154182611174683, 5.4638802e-05]
+        - [-0.999954688115389, -0.009512152480793956, 0.000375062392810248, -0.037469669768]
+        - [0.0003682401598825315, 0.0007189535948102481, 0.9999996737524034, -0.126682785277]
+        - [0, 0, 0, 1]
+  - sensor_id: 4af1bac2a7c5fad79f09e49e3b96d87c
+    base_sensor_id: 3da6d03bd42e41a93dc941bd5fd9353d
+    T_B_S:
+      rows: 4
+      cols: 4
+      data:
+        - [1, 0, 0, 0]
+        - [0, 1, 0, 0]
+        - [0, 0, 1, 0]
+        - [0, 0, 0, 1]
+  - sensor_id: 3da6d03bd42e41a93dc941bd5fd9353d
+    base_sensor_id: 3da6d03bd42e41a93dc941bd5fd9353d
+    T_B_S:
+      rows: 4
+      cols: 4
+      data:
+        - [1, 0, 0, 0]
+        - [0, 1, 0, 0]
+        - [0, 0, 1, 0]
+        - [0, 0, 0, 1]
+  - sensor_id: acbb23479caf7592b35518478a2fe08f
+    base_sensor_id: 3da6d03bd42e41a93dc941bd5fd9353d
+    T_B_S:
+      rows: 4
+      cols: 4
+      data:
+        - [1, 0, 0, -0]
+        - [0, 1, 0, -0]
+        - [0, 0, 1, -0]
+        - [0, 0, 0, 1]
