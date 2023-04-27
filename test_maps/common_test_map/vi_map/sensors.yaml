@@ -3,6 +3,7 @@ sensors:
     sensor_type: LIDAR
     topic: /lidar_undistortion/pointcloud_corrected
     description: Ouster OS1
+    has_point_timestamps: false
   - id: 4af1bac2a7c5fad79f09e49e3b96d87c
     sensor_type: NCAMERA
     topic: ""
